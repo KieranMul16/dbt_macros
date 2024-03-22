@@ -14,12 +14,12 @@ select
         ['email']
     ) -}} as email_fk,
 
-    lower('{{- table }}') as csv_file_name,
+    lower('{{- table }}') as file_name,
 
     cast(dataset as string) as src_dataset,
     cast(meta as string) as meta
 
-from tmp_csv_files.{{- table }}
+from `TARGET SCHEMA`.{{- table }}
 
 {%- if not loop.last %}
 

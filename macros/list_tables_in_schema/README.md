@@ -15,3 +15,5 @@ The results of this macro can then be used as a jinja set.
 `example_model_file.sql` is an example model file that uses the list of tables to loop through and ultimately concatenate together.
 
 The example file demonstrates how we parsed through the original file name into the model which gives us a reliable thread when troubleshooting issues.
+
+The example contains a mock `TARGET SCHEMA` which would need to be replaced with the schema containing your tables. Or, this could be further improved and it could be passed into the macro itself.
